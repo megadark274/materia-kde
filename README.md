@@ -4,6 +4,8 @@
 
 This is a port of the popular [GTK theme Materia](https://github.com/nana-4/materia-theme) for the Plasma desktop (Plasma 5 and 6) with a few additions and extras.
 
+> **Plasma 6 fork:** this is a fork of [PapirusDevelopmentTeam/materia-kde](https://github.com/PapirusDevelopmentTeam/materia-kde) updated for Plasma 6. The global themes, desktop themes and window decorations now ship Plasma 6 metadata, and the SDDM themes are ported to Qt 6 (requires SDDM 0.21+ with the Qt 6 greeter). Plasma 6 no longer lets global themes provide a lock screen, so the standard Plasma lock screen is used.
+
 In this repository you'll find:
 - Aurorae window decoration themes
 - Konsole color schemes
@@ -29,6 +31,8 @@ sudo apt-get install --install-recommends materia-kde
 
 or download .deb packages from [here](https://launchpad.net/~papirus/+archive/ubuntu/papirus/+packages?field.name_filter=materia-kde).
 
+> **Note:** the PPA packages are built from the original repository and do not include the Plasma 6 changes from this fork. Use the installer below instead.
+
 ### Materia KDE installer
 
 #### Install
@@ -36,13 +40,13 @@ or download .deb packages from [here](https://launchpad.net/~papirus/+archive/ub
 Use this command to install the latest version directly from this repo (independently of your distro):
 
 ```
-wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/materia-kde/master/install.sh | sh
+wget -qO- https://raw.githubusercontent.com/megadark274/materia-kde/master/install.sh | sh
 ```
 
 #### Uninstall
 
 ```
-wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/materia-kde/master/install.sh | uninstall=true sh
+wget -qO- https://raw.githubusercontent.com/megadark274/materia-kde/master/install.sh | uninstall=true sh
 ```
 
 ### Third-party packages

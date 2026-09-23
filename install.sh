@@ -2,6 +2,7 @@
 
 set -e
 
+gh_owner="megadark274"
 gh_repo="materia-kde"
 gh_desc="Materia KDE"
 
@@ -24,7 +25,7 @@ cat <<- EOF
   ▀▀    ▀▀  ▀▀▀▀▀     ▀▀▀▀▀▀▀▀
 
   $gh_desc
-  https://github.com/PapirusDevelopmentTeam/$gh_repo
+  https://github.com/$gh_owner/$gh_repo
 
 
 EOF
@@ -46,7 +47,7 @@ _rm() {
 _download() {
     _msg "Getting the latest version from GitHub ..."
     wget -O "$temp_file" \
-        "https://github.com/PapirusDevelopmentTeam/$gh_repo/archive/$TAG.tar.gz"
+        "https://github.com/$gh_owner/$gh_repo/archive/$TAG.tar.gz"
     _msg "Unpacking archive ..."
     tar -xzf "$temp_file" -C "$temp_dir"
 }
