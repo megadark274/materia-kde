@@ -209,6 +209,7 @@ Rectangle {
             id: dialog
             closePolicy: Popup.NoAutoClose
             dim: false
+            Material.roundedScale: Material.ExtraSmallScale
             focus: true
             visible: true
             Material.theme: Material.Light
@@ -443,6 +444,7 @@ Rectangle {
                     onClicked: sddm.login(user.currentText, password.text,
                                           session.currentIndex)
                     highlighted: true
+                    Material.roundedScale: Material.ExtraSmallScale
                 }
             }
         }
