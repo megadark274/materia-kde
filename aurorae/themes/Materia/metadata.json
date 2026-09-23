@@ -1,0 +1,15 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Alexey Varfolomeev",
+                "Email": "varlesh@gmail.com"
+            }
+        ],
+        "Id": "Materia",
+        "License": "GPL v3",
+        "Name": "Materia",
+        "Version": "1.0",
+        "EnabledByDefault": true
+    }
+}

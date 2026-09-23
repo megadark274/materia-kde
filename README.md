@@ -2,7 +2,7 @@
 
 # Materia KDE
 
-This is a port of the popular [GTK theme Materia](https://github.com/nana-4/materia-theme) for the Plasma 5 desktop with a few additions and extras.
+This is a port of the popular [GTK theme Materia](https://github.com/nana-4/materia-theme) for the Plasma desktop (Plasma 5 and 6) with a few additions and extras.
 
 In this repository you'll find:
 - Aurorae window decoration themes

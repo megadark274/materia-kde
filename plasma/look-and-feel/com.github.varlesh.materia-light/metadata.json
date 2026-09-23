@@ -1,0 +1,25 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Alexey Varfolomeev"
+            }
+        ],
+        "Description": "Materia Light",
+        "Id": "com.github.varlesh.materia-light",
+        "License": "GPLv3",
+        "Name": "Materia Light",
+        "Version": "20220823",
+        "Website": "https://github.com/PapirusDevelopmentTeam/materia-kde"
+    },
+    "X-KDE-fallbackPackage": "org.kde.breeze.desktop",
+    "X-KPackage-Dependencies": [
+        "kns://colorschemes.knsrc/api.kde-look.org/1462605",
+        "kns://plasma-themes.knsrc/api.kde-look.org/1462611",
+        "kns://aurorae.knsrc/api.kde-look.org/1462610",
+        "kns://icons.knsrc/api.kde-look.org/1166289",
+        "kns://xcursor.knsrc/api.kde-look.org/1346778",
+        "kns://wallpaper.knsrc/api.kde-look.org/1462613"
+    ]
+}

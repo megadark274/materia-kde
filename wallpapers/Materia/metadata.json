@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Alexey Varfolomeev",
+                "Email": "varlesh@gmail.com"
+            }
+        ],
+        "Id": "Materia",
+        "Name": "Materia"
+    }
+}
