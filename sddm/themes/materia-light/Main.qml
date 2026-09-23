@@ -4,10 +4,10 @@
 // - Suraj Mandal from https://github.com/surajmandalcell/Elegant-sddm
 // - Breeze theme by KDE Visual Design Group
 // - SDDM Team https://github.com/sddm/sddm
-import QtQuick 2.8
-import QtQuick.Controls 2.1
-import QtGraphicalEffects 1.0
-import QtQuick.Controls.Material 2.1
+import QtQuick
+import QtQuick.Controls
+import Qt5Compat.GraphicalEffects
+import QtQuick.Controls.Material
 import "components"
 
 Rectangle {
@@ -30,15 +30,11 @@ Rectangle {
 
     Connections {
         target: sddm
-        onLoginSucceeded: {
-
-        }
-        onLoginFailed: {
+        function onLoginFailed() {
             password.placeholderText = textConstants.loginFailed
             password.placeholderTextColor = "#f44336"
             password.text = ""
             password.focus = true
-            errorMsgContainer.visible = true
         }
     }
 
@@ -74,10 +70,12 @@ Rectangle {
     Row {
         anchors.top: parent.top
         anchors.right: parent.right
-        anchors.rightMargin: 30
+        anchors.rightMargin: 8
         anchors.topMargin: 5
 
         Item {
+            width: shutdown.width
+            height: shutdown.height
 
             Image {
                 id: shutdown
@@ -115,10 +113,12 @@ Rectangle {
     Row {
         anchors.top: parent.top
         anchors.right: parent.right
-        anchors.rightMargin: 60
+        anchors.rightMargin: 38
         anchors.topMargin: 5
 
         Item {
+            width: reboot.width
+            height: reboot.height
 
             Image {
                 id: reboot
@@ -182,7 +182,7 @@ Rectangle {
         Text {
             id: kb
             color: "#444444"
-            text: keyboard.layouts[keyboard.currentLayout].shortName
+            text: keyboard.layouts[keyboard.currentLayout]?.shortName ?? ""
             font.pointSize: 11
         }
     }
@@ -208,6 +208,7 @@ Rectangle {
         Dialog {
             id: dialog
             closePolicy: Popup.NoAutoClose
+            dim: false
             focus: true
             visible: true
             Material.theme: Material.Light
@@ -219,8 +220,12 @@ Rectangle {
                 verticalItemAlignment: Grid.AlignVCenter
                 horizontalItemAlignment: Grid.AlignHCenter
 
-                Column {
+                Item {
+                    width: ava.width
+                    height: ava.height
+
                     Item {
+                        anchors.fill: parent
 
                         Rectangle {
                             id: mask
@@ -354,7 +359,7 @@ Rectangle {
                                     property: "opacity"
                                     from: 0
                                     to: 1
-                                    duration: imageFadeIn
+                                    duration: 250
                                 }
                             },
 
@@ -365,14 +370,14 @@ Rectangle {
                                     property: "opacity"
                                     from: 1
                                     to: 0
-                                    duration: imageFadeOut
+                                    duration: 250
                                 }
                             }
                         ]
                     }
                 }
 
-                Keys.onPressed: {
+                Keys.onPressed: event => {
                     if (event.key === Qt.Key_Return
                             || event.key === Qt.Key_Enter) {
                         sddm.login(user.currentText, password.text,
